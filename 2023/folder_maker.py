@@ -9,7 +9,7 @@ for month in months:
     # setting no. of days
     if month == "Feb":
         days =28
-    elif month in ["March","May", "July", "August", "October", ]:
+    elif month in ["March","May", "July", "August", "October", "December" ]:
         days =31
     else:
         days =30
@@ -19,6 +19,7 @@ for month in months:
         # I got error in the below line as join only accepts string.
         # This script worked fine.
         day_path = os.path.join(month_path, str(date) )
+        os.mkdir(day_path)
 
 
     
