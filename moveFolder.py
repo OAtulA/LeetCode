@@ -1,3 +1,6 @@
+'''
+This script didn't work
+'''
 import os
 
 Path = os.getcwd()

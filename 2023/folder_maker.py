@@ -16,8 +16,9 @@ for month in months:
     
     #creating days folders in months
     for date in range(1, days+1):
-        day_path = os.path.join(month_path, date)
-        os.mkdir(day_path)
+        # I got error in the below line as join only accepts string.
+        # This script worked fine.
+        day_path = os.path.join(month_path, str(date) )
 
 
     
