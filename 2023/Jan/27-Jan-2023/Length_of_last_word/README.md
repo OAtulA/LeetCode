@@ -16,4 +16,3 @@ after triming the string using String.trim()
 
 Trim the sentence using String.trim()  
 Reverse iterate the characters to find the first space.
-
