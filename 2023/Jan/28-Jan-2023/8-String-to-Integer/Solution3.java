@@ -25,12 +25,15 @@ public class Solution3 {
 
                 if( Double.parseDouble( number ) + ans >= Integer.MAX_VALUE ){
                     ans = Integer.MAX_VALUE;
+                    return ans;
                 }
                 else if( Double.parseDouble( number ) + ans <= Integer.MIN_VALUE ){
                     ans = Integer.MIN_VALUE;
+                    return ans;
                 }
                 else{
                     ans = (int)( Double.parseDouble( number ) + ans);
+                    return ans;
                 }
             }
             
@@ -40,12 +43,13 @@ public class Solution3 {
             }
 
             //checking for next word
-
+            /* 
             try {
                 double d = Double.parseDouble(words[i+1]);
             } catch (Exception e) {
                 break;
             }
+            */
             
         }
 
@@ -55,7 +59,8 @@ public class Solution3 {
     public static void main(String[] args) {
         // System.out.println(myAtoi("42 word -234"));
         // System.out.println(myAtoi("3.14159")); 
-        System.out.println(myAtoi("  -0012a42"));
+        //System.out.println(myAtoi("  -0012a42"));
+        System.out.println(myAtoi("   +0 123"));
     }
     
 }

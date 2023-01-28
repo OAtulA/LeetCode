@@ -15,6 +15,10 @@ Removed some logical error.
 
 Working for "3.14"
 
-### Commit id
+### Commit id a1997fd
 
 Working for "  -0012a42"
+
+### k
+
+Working on "   +0 123"  
