@@ -12,16 +12,23 @@ public class Solution {
 
         // Loop to get all numbers from the given String
         int startNumIndex =0,nextSpaceIndex=0;
+        boolean plus_min_num = false;
         for (int i = 0; i < s.length(); i++) {
-            boolean plus_min_num= (s.charAt(i+1) == '-' || s.charAt(i+1)== '+' || Character.isDigit(s.charAt(i+1))) ;
+            if(!(i==s.length()-1)){
+            plus_min_num = (s.charAt(i+1) == '-' || s.charAt(i+1)== '+' || Character.isDigit(s.charAt(i+1))) ;
+            }
             // To check if the next letters are for number.
 
             /*
              startNumIndex!= nextSpaceIndex as while iterating we will reach next space 
              and both are equal we won't get a number.
-             */
-          
-            if(s.charAt(i) == ' ' && startNumIndex!= nextSpaceIndex ) {
+            */
+            
+            //if(s.charAt(i) == ' ' && startNumIndex!= nextSpaceIndex ) 
+            //Let's see if it works now
+
+            //if(s.charAt(i) == ' ' ) works as earlier startNumIndex == nextSpaceIndex
+            if(s.charAt(i) == ' ' || i== s.length() ) {
                 nextSpaceIndex =i;
                 String number = s.substring(startNumIndex, nextSpaceIndex) ;
                 int num=Integer.parseInt( number );
@@ -29,7 +36,7 @@ public class Solution {
                 nums.add(num);
 
                 // so that the next num starts from the next index.
-                if(plus_min_num){
+                if( !(i==s.length()-1) && plus_min_num){
                     startNumIndex = nextSpaceIndex +1;
                 }
             }
@@ -51,6 +58,6 @@ public class Solution {
         
 
     public static void main(String[] args) {
-        System.out.println( myAtoi("  -131 word"));
+        System.out.println( myAtoi("42"));
     }
 }
