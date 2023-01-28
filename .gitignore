@@ -1,2 +1,5 @@
 # ignoring all .class file
 *.class
+ 
+# ignoring my vs code stuff
+.vscode
