@@ -11,7 +11,10 @@ Removed some logical error.
 
 ## Solution3.java
 
-### Commit id
+### Commit id 57fb88d
 
 Working for "3.14"
 
+### Commit id
+
+Working for "  -0012a42"
