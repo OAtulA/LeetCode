@@ -12,7 +12,10 @@ public class Solution3 {
                 int wordEnd = words[i].length();
                 int j = 0;
                 for (; j < words[i].length(); j++) {
-                    if( Character.isAlphabetic(words[i].charAt(j) )){
+                    boolean isALpha = Character.isAlphabetic(words[i].charAt(j));
+                    boolean symbolCheck = ( (words[i].charAt(j)=='-' || words[i].charAt(j)=='+' )&& j!=0 )  ;
+
+                    if( isALpha  || symbolCheck ) {
                     wordEnd = j;
                     break;
                     }
@@ -60,7 +63,8 @@ public class Solution3 {
         // System.out.println(myAtoi("42 word -234"));
         // System.out.println(myAtoi("3.14159")); 
         //System.out.println(myAtoi("  -0012a42"));
-        System.out.println(myAtoi("   +0 123"));
+        //System.out.println(myAtoi("   +0 123"));
+        System.out.println(myAtoi("-5-"  ) );
     }
     
 }
