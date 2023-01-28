@@ -1,6 +1,6 @@
 
 
-class Solution {
+class Solution2 {
     public static int myAtoi(String s) {
         s = s.trim();
 
@@ -16,13 +16,15 @@ class Solution {
             if( Long.parseLong( words[i] ) + ans >= Integer.MAX_VALUE ){
                 ans = Integer.MAX_VALUE;
             }
+            /* 
             else{
                 ans = Integer.parseInt(words[i]) + ans;
             }
+            */
 
             //for lowerbound int value checking
 
-            if( Long.parseLong( words[i] ) + ans <= Integer.MIN_VALUE ){
+            else if( Long.parseLong( words[i] ) + ans <= Integer.MIN_VALUE ){
                ans = Integer.MIN_VALUE;
             }
             else{
@@ -48,6 +50,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(myAtoi("42 word -234"));
+        // System.out.println(myAtoi("42 word -234"));
+        System.out.println(myAtoi("3.14159"));
     }
 }
