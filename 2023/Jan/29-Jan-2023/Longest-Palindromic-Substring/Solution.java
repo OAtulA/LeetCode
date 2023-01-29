@@ -12,7 +12,11 @@ public class Solution {
             String letter = Character.toString(s.charAt(i));
             int endIndex = s.lastIndexOf(letter);
 
-            if (i != endIndex) {
+            if(s.length()==1){
+                return s;
+            }
+
+            else if (i != endIndex) {
                 //Checking for the biggest palindrome
                 String substr = s.substring(i, endIndex + 1);
                 boolean isPalindrome = substr.equals((new StringBuffer(substr).reverse()).toString());
@@ -54,7 +58,8 @@ public class Solution {
 
     public static void main(String[] args) {
         //String s = "babad";
-        String s = "cbbd";
+        //String s = "cbbd";
+        String s= "a";
 
         System.out.println(longestPalindrome(s));
         
