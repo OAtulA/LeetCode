@@ -20,3 +20,8 @@ we can look for last index of s.charAt(i)
 if s.lastIndexOf( s.charAt(i) ) != i
     check for palindrome
     update variables store length and substr.
+
+## Commit id 825ea6d
+
+working for  
+String s = "cbbd";  
