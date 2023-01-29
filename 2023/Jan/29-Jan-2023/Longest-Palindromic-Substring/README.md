@@ -25,3 +25,11 @@ if s.lastIndexOf( s.charAt(i) ) != i
 
 working for  
 String s = "cbbd";  
+
+## Commit id 7715ef8
+
+working for s ="a"
+
+## commit id  
+
+working for s = "ac"
