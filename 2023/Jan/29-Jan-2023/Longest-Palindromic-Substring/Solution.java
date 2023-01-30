@@ -12,63 +12,61 @@ public class Solution {
             String letter = Character.toString(s.charAt(i));
             int endIndex = s.lastIndexOf(letter);
 
-            if(s.length()==1){
+            if (s.length() == 1) {
                 return s;
-            }
+            } 
             else if (i != endIndex) {
-                //Checking for the biggest palindrome
+                // Checking for the biggest palindrome
                 String substr = s.substring(i, endIndex + 1);
-                boolean isPalindrome = substr.equals((new StringBuffer(substr).reverse()).toString());
+                String reversed = (new StringBuffer(substr).reverse()).toString();
+                boolean isPalindrome = substr.equals(reversed);
 
                 if (isPalindrome && (substr.length() > maxPalin)) {
                     Palin = substr;
                     maxPalin = substr.length();
-                } 
+                }
                 // When we can't find the biggest we try to find the next biggest with it.
                 else {
-                    /* Thought process
-                    // going back in reverse order to find the next recent same letter
-                    // to check for palindrome
-                    // similar to like binary search
-                     */
-                    int mid = (i + endIndex) / 2;
-                    int recentindex = s.indexOf(letter, mid);
-                    while (recentindex != endIndex) {
-                        substr = s.substring(i, recentindex + 1);
-                        isPalindrome = substr.equals((new StringBuffer(substr).reverse()).toString());
+                     int mid;
+                    
+                        mid = endIndex-1;
+                        int recentindex = s.indexOf(letter, mid);
+                        while (recentindex != endIndex) {
+                            substr = s.substring(i, recentindex + 1);
+                            isPalindrome = substr.equals((new StringBuffer(substr).reverse()).toString());
 
-                        if (isPalindrome && (substr.length() > maxPalin)) {
-                            Palin = substr;
-                            maxPalin = substr.length();
+                            if (isPalindrome && (substr.length() > maxPalin)) {
+                                Palin = substr;
+                                maxPalin = substr.length();
+                            }
+                            mid = endIndex-1;
+                            recentindex = s.indexOf(letter, mid);
                         }
-                        endIndex = recentindex;
-                    }
+                    
                 }
-        
-            }
-            else if(maxPalin==0){
+
+            }else if (maxPalin == 0) {
                 Palin = letter;
-                maxPalin =1;
+                maxPalin = 1;
             }
 
         }
-        
-
 
         return Palin;
     }
 
     public static void main(String[] args) {
-    
-        //String s = "babad";
-        //String s = "cbbd";
+
+        // String s = "babad";
+        // String s = "cbbd";
         // String s= "a";
 
         String s;
-        s= "ac";
-        
+        // s= "ac";
+        // s = "aaabaaaa";
+        s="bacabab";
 
         System.out.println(longestPalindrome(s));
-        
+
     }
 }

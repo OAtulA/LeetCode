@@ -33,3 +33,7 @@ working for s ="a"
 ## commit id  86b6eba
 
 working for s = "ac"
+
+## Commit id
+
+working on s= "aaabaaaa"
