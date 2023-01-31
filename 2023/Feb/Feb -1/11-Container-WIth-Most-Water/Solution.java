@@ -28,7 +28,7 @@ class Solution {
         end = height[height.length - 1];
         area =  Math.min(start, end) * Math.abs(height.length -1);
         endIndex = height.length - 1 ;
-        for (int i = 0; i <= height.length / 2 + 1; i++) {
+        for (int i = 0; i <= height.length / 2 ; i++) {
 
             // preventing same wall
             if (i != height.length - 1 - i) {
@@ -57,7 +57,7 @@ class Solution {
 
         //int[] arr = { 2, 3, 4, 5 };
         // int[] height = {1,8,6,2,5,4,8,3,7};
-        int[] height = {1,1};
+        // int[] height = {1,1};
         System.out.println("max area: " + maxArea(height));
 
     }
