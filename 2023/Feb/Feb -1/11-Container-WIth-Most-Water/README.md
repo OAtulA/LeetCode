@@ -38,3 +38,6 @@ Start a single loop with half length.
 move the pointer only if the height increases.  
 Calculate and compare the area.
 
+## Approach 4: 2 pointer approach but optimised
+
+move that pointer whose height is less till the start < end pointer.
