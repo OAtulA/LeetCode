@@ -1,4 +1,4 @@
-import java.io.*;
+
 
 class Solution{
     public static int lengthOfLongestSubstring(String s) {
@@ -9,7 +9,7 @@ class Solution{
             //to get starting letter
             
             subLen =0;
-            for (int j = i+1;  j < s.length() ; j++) {
+            for (int j = i+1;  j <= s.length() ; j++) {
                 //to get letters of the substring
 
                 //This substring is before this char
@@ -18,7 +18,7 @@ class Solution{
                 subLen = sub.length();
                 
                 //checking if this letter is already present in subsstring
-                                
+                if(j== s.length())  j--;              
                 boolean containsLetter = sub.contains( Character.toString(s.charAt(j) ));
                 if(containsLetter){                    
                     break;
@@ -39,7 +39,8 @@ class Solution{
 
         //s ="sldfhlsd sofsdfsd sofjsdoifj";
         // s="pwwkew";
-        s= " ";
+        //s= " ";
+        s= "au";
         System.out.println("Longest non repeating substring "+lengthOfLongestSubstring(s));
     }
 
