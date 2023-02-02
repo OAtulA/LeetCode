@@ -1,0 +1,5 @@
+# ignoring the executable c++ Solution file
+/Solution
+
+# ignoring .class file
+/*.class
