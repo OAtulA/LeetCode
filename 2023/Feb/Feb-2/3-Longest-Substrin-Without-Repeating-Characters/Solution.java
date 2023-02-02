@@ -3,7 +3,8 @@ import java.io.*;
 class Solution{
     public static int lengthOfLongestSubstring(String s) {
         int n = s.length(), maxLen=0,subLen=0;
-        
+        if(n ==1)
+            return 1;
         for (int i = 0; i < s.length(); i++) {
             //to get starting letter
             
@@ -37,7 +38,8 @@ class Solution{
         String s;
 
         //s ="sldfhlsd sofsdfsd sofjsdoifj";
-        s="pwwkew";
+        // s="pwwkew";
+        s= " ";
         System.out.println("Longest non repeating substring "+lengthOfLongestSubstring(s));
     }
 
