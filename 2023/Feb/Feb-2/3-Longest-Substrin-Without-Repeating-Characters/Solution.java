@@ -6,8 +6,9 @@ class Solution{
         
         for (int i = 0; i < s.length(); i++) {
             //to get starting letter
-            boolean brk2 = false;
-            for (int j = i; ( j < s.length() -1); j++) {
+            
+            subLen =0;
+            for (int j = i+1;  j < s.length() ; j++) {
                 //to get letters of the substring
 
                 //This substring is before this char
@@ -18,8 +19,7 @@ class Solution{
                 //checking if this letter is already present in subsstring
                                 
                 boolean containsLetter = sub.contains( Character.toString(s.charAt(j) ));
-                if(containsLetter){
-                    brk2 =true;
+                if(containsLetter){                    
                     break;
                 }                                    
             }
@@ -36,7 +36,8 @@ class Solution{
     public static void main(String[] args) {
         String s;
 
-        s ="sldfhlsd sofsdfsd sofjsdoifj";
+        //s ="sldfhlsd sofsdfsd sofjsdoifj";
+        s="pwwkew";
         System.out.println("Longest non repeating substring "+lengthOfLongestSubstring(s));
     }
 
