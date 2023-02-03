@@ -15,10 +15,23 @@ class Solution {
             
             mid = (start+ end)/2;
         }
+        /*
         if( mid != nums.length-1)
          mid++;
-        
-         return mid;
+        */
+        /*
+         I got my mistake.
+         To propose its probable index 
+         I simply need to once more compare the value with the mid value.
+         If the nums[mid] > target, target should be immediately before it.
+         else If the nums[mid] > target, target should be immediately after it.
+         */
+        if(nums[mid]> target && mid!=0 )
+            mid--;
+        else        
+            mid++;
+        return mid;
+
     }
     public static void main(String[] args) {
         int[] n = {1,3,5,6};
