@@ -9,7 +9,7 @@ class Solution {
             if(nums[mid]== target)
                 return mid;
             else if(nums[mid]> target)
-                end = mid -1;
+                end = mid;
             else 
                 start = mid+1;
             
@@ -27,14 +27,15 @@ class Solution {
          else If the nums[mid] > target, target should be immediately after it.
          */
         if(nums[mid]> target && mid!=0 )
+        // if(nums[mid]> target)
             mid--;
-        else        
+        else if(nums[mid]< target && mid!= nums.length-1 )      
             mid++;
         return mid;
 
     }
     public static void main(String[] args) {
         int[] n = {1,3,5,6};
-        System.out.println(searchInsert(n, 2));
+        System.out.println(searchInsert(n, 7));
     }
 }
