@@ -23,7 +23,6 @@
      //The below if is not needed as we have already checked above.
      //if(n != len)
      slow.next = (slow.next).next;
-     else return head.next;
 
      return head;
     }

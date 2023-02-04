@@ -29,7 +29,11 @@ We are moving fast and slow together.
 Since we need 1 inded before the nth index  
 To link it to next of next  
 
-### Modifiactions Commit id 
+### Modifiactions Commit id 6de3491
 
 I learnt that it n might end up being the number of elements.  
 So I corrected the code.  
+
+### Modifications Commit id 
+
+I removed the codition from bottom and placed it at upper end  
