@@ -17,6 +17,8 @@ I ended up learning something.
 
 ## Approach 2
 
+### COmmit id 8b8e2d3
+
 From the edutorial  
 In Solution2.java  
 
@@ -26,3 +28,8 @@ Then we start to move the slow pointer starting at head.
 We are moving fast and slow together.  
 Since we need 1 inded before the nth index  
 To link it to next of next  
+
+### Modifiactions Commit id 
+
+I learnt that it n might end up being the number of elements.  
+So I corrected the code.  

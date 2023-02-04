@@ -10,16 +10,21 @@
      }
      ListNode slow =head;
      // We are finding one before the nth element
-     
+
+     //As there is a possibilty n = no. of elements.
+     if(fast == null) 
+        return head.next;
+
      while(fast.next!= null){
         fast = fast.next;
         slow = slow.next;    
         len++;    
      }
-     if(n != len)
+     //The below if is not needed as we have already checked above.
+     //if(n != len)
      slow.next = (slow.next).next;
      else return head.next;
-     
+
      return head;
     }
 }
