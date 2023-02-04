@@ -23,7 +23,8 @@ class Solution {
         }
         temp =head;
         //this will iterate just before the deletion node
-        for (int i = 0; i < len - n -1; i++) {
+        // for (int i = 0; i < len - n -1; i++) {
+        for (int i = 0; i < len - n; i++) {
             temp = temp.next;
         }
 
@@ -31,9 +32,12 @@ class Solution {
          * The below statement boils down to 
          *  ( (n-1)th_Node.next) = (n+1)th_Node.next
          */
+        if(len>1){
         ListNode Del= temp.next;
 
         temp.next = Del.next;
+        }
+        
         
         return head;
     }
