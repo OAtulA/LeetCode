@@ -11,7 +11,7 @@ class Solution {
             else if(nums[mid]> target)
                 end = mid;
             else 
-                start = mid+1;
+                start = mid;
             
             mid = (start+ end)/2;
         }
@@ -29,7 +29,8 @@ class Solution {
         if(nums[mid]> target && mid!=0 )
         // if(nums[mid]> target)
             mid--;
-        else if(nums[mid]< target && mid!= nums.length-1 )      
+        else if(nums[mid]< target) 
+        // && mid!= nums.length-1 )      
             mid++;
         return mid;
 
