@@ -37,12 +37,12 @@ class Solution {
 
         temp.next = Del.next;
         }
+        else return head.next;
         
         
         return head;
     }
-
-    public static void main(String[] args) {
+}   public static void main(String[] args) {
         ListNode head = new ListNode();
 
         for (int i = 1; i <= 7; i++) {

@@ -7,3 +7,7 @@ So I will iterate till (length-1 -n-1):
 
 Next = temp->next->next
 temp-> next = Next
+
+I tried it on Solution.java but it didn't work.  
+I ended up learning something.  
+  
