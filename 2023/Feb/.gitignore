@@ -1,0 +1,6 @@
+# ignoring all java .class files
+
+*.class
+
+# ignoring all Cpp Solution files
+
