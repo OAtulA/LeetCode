@@ -2,7 +2,7 @@
 
 ## Approach1
 
-### Commit id 3654586
+### Commit id 30bfd74
 
 I will have 2 pointers.  
 itr and temp
@@ -11,5 +11,6 @@ Next I will move the itr to next of temp.
 
 My cpp solution didn't work and Java solution gave TLE.  
 
-### Commit id 
+### made iprovement in code by adjusting the iterator
 
+I am now using 4 pointers

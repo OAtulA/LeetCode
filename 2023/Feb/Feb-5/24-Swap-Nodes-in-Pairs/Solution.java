@@ -35,7 +35,7 @@ class Solution {
                 second.next = first;
                 itr.next =second;
                 first.next = secondNext;
-                itr = first;
+                
                 //swaping completed
 
                 itr = first;                
