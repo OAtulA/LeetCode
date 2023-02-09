@@ -3,3 +3,6 @@
  
 # ignoring my vs code stuff
 .vscode
+
+# Ignoring all compiled cpp files.
+Solution
